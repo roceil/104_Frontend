@@ -1,0 +1,101 @@
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer tailwind-utilities {
+  @tailwind utilities;
+  @tailwind variants;
+}
+
+/* blur */
+.blur-back-40 {
+  @apply backdrop-blur-[15px] bg-opacity-40;
+}
+
+.blur-back-80 {
+  @apply backdrop-blur-[15px] bg-opacity-80;
+}
+
+.card-hover {
+  @apply hover:rounded-xl hover:shadow-primary active:rounded-xl active:shadow-primary;
+  &:hover,
+  &:active {
+    background: linear-gradient(#fff 0 0) padding-box,
+      linear-gradient(to right, #fe839a, #4a72ff) border-box !important;
+    border: 2px solid transparent !important;
+  }
+}
+
+.card-active {
+  @apply rounded-xl shadow-primary;
+  & {
+    background: linear-gradient(#fff 0 0) padding-box,
+      linear-gradient(to right, #fe839a, #4a72ff) border-box !important;
+    border: 2px solid transparent !important;
+  }
+}
+
+.linear-border {
+  background: linear-gradient(#fff 0 0) padding-box,
+  linear-gradient(to right, #fe839a, #4a72ff) border-box !important;
+  border: 2px solid transparent !important;
+}
+
+.card-border:hover {
+  background: linear-gradient(#fff 0 0) padding-box,
+  linear-gradient(to right, #fe839a, #4a72ff) border-box !important;
+  border: 2px solid transparent !important;
+}
+
+.submit_story-inner-shadow-primary {
+  box-shadow: -3px -4px 18px 0px #FF91A433 inset;
+}
+
+.submit_story-inner-shadow-white {
+  box-shadow: 13px 4px 20px 0px #FFFFFF99 inset;
+}
+
+/* nav-items */
+.nav-items {
+  @apply text-zinc-950 font-bold;
+  svg {
+    @apply absolute -left-6 
+  }
+  &:hover {
+    @apply text-primary-dark;
+  }
+}
+
+.inactive-class svg {
+  display: none;
+}
+
+.active-class {
+  @apply text-primary-dark;
+  svg {
+    display: inline-block;
+  }
+}
+
+.linear-border-bottom {
+  border-bottom: 1px solid transparent;
+    border-image: linear-gradient(to right, #fe839a, #4a72ff);
+    border-image-slice: 1;
+    width:100%;
+}
+
+.custom-modal-top {
+  top: 64px;
+  bottom: auto; /* 取消底部定位 */
+}
+
+@media (min-width: 768px) {
+  .custom-modal-top {
+    top: 64px;
+    bottom: auto;
+  }
+}
+
+.chat-room-size {
+  width: 636px !important;
+}
